@@ -1,28 +1,29 @@
 /* Grid */
+@import url('tabular.css');
 .layout {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    }
-    
-    .time { grid-area: 1 / 1 / 2 / 2; }
-    .date { grid-area: 1 / 2 / 2 / 3; }
-    .weather { grid-area: 2 / 1 / 3 / 3; }
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin: auto;
+}
     
 
 /* Widgets */
 section {
-  background: lightgray;
+  background: rgb(255, 225, 225);
   padding: 1em;
+  margin: 10px;
   
   /* Relative Parent. Absolute Child */
   position: relative;
+  font-family: 'Tabular-Bold';
 }
 
 /* Time */
 .time {
+  grid-area: 1 / 1 / 2 / 2;
 }
 
 .hours {
@@ -40,7 +41,7 @@ section {
 
 /* Date */
 .date {
-  
+  grid-area: 1 / 2 / 2 / 3;
 }
 
 .month {
@@ -57,7 +58,7 @@ section {
 
 /* Weather */
 .weather {
-  
+  grid-area: 1 / 3 / 2 / 4;
 }
 
 .city {
