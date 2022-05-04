@@ -24,10 +24,16 @@ fetch(url)
     <h1>🌡️weather</h1>
     <data value="${data.name}" class="city">${data.name}</data>
     <data value="${data.main.temp}" class="temp">${data.main.temp}&#8457;</data>
+    <p>humidity
+    <data value="${data.main.humidity}" class="unit">${data.main.humidity}</data>
+    %</p>
     <img src="http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="Placeholder">
   `;
+
+
   
   // Insert dynamic template to container
   weatherContainer.insertAdjacentHTML("afterbegin", template);
+  
   
 });
