@@ -1,7 +1,7 @@
 // API key. Replace with your API key
 const APIKEY = '20b9617656d3a0c77905ba65cdf0a3db';
 // City
-const city = 'pasco';
+const city = 'tokyo';
 // Units for Farenheit
 const units = 'imperial';
 
@@ -24,9 +24,12 @@ fetch(url)
     <h1>🌡️weather</h1>
     <data value="${data.name}" class="city">${data.name}</data>
     <data value="${data.main.temp}" class="temp">${data.main.temp}&#8457;</data>
-    <p>humidity
-    <data value="${data.main.humidity}" class="unit">${data.main.humidity}</data>
+    <p>humidity:
+    <data value="${data.main.humidity}" class="humidity">${data.main.humidity}</data>
     %</p>
+    <p> wind speed:
+    <data value="${data.wind.speed}" class="wind">${data.wind.speed}</data>
+    mph </p>
     <img src="http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="Placeholder">
   `;
 
